@@ -1,0 +1,15 @@
+Reverse polish notation = Post fix notation. So here, we will get the operands first and then the operators.
+
+1. We use a stack to store all the operands.
+2. We store all the operands in the order we receive it in.
+3. If we get an operator, we operate it on the previous two operands.
+4. We store the resultant operand as it will be used for future operations.
+
+So the algorithm is:
+
+If the character is a number (operand), push it into the stack
+If the character is an operator,
+Pop the top two operands (numbers) from the stack.
+Find the result of the operation using the operator
+Push the result back in the stack
+After traversal, the top of the stack will be the result of evaluated reverse polish expression.
